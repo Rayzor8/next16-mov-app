@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Geist_Mono, Geist } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/context/theme";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Watch List",
@@ -22,7 +24,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,7 +34,10 @@ export default function RootLayout({
       <body
         className={`antialiased  ${inter.variable} ${geist.variable} ${geistMono.variable} `}
       >
-        {children}
+        <ThemeProvider defaultTheme="light">
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

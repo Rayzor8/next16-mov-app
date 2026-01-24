@@ -3,6 +3,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+}
+
 :root {
   --background: #f3faff;
   --foreground: #040c13;
@@ -36,9 +45,9 @@
   --sidebar-accent-foreground: #040c13;
   --sidebar-border: #d2d8dd;
   --sidebar-ring: #00b1c3;
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Geist', serif;
-  --font-mono: 'Geist Mono', monospace;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Geist", serif;
+  --font-mono: "Geist Mono", monospace;
   --radius: 0.5rem;
   --shadow-x: 0;
   --shadow-y: 0.25rem;
@@ -48,11 +57,16 @@
   --shadow-color: oklch(0 0 0 / 0.1);
   --shadow-2xs: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.05);
   --shadow-xs: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.05);
-  --shadow-sm: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
-  --shadow: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
-  --shadow-md: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.10);
-  --shadow-lg: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);
-  --shadow-xl: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);
+  --shadow-sm:
+    0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow:
+    0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow-md:
+    0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+  --shadow-lg:
+    0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+  --shadow-xl:
+    0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
   --shadow-2xl: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.25);
   --tracking-normal: 0;
   --spacing: 0.25rem;
@@ -91,9 +105,9 @@
   --sidebar-accent-foreground: #f3faff;
   --sidebar-border: #19232a;
   --sidebar-ring: #00b1c3;
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Geist', serif;
-  --font-mono: 'Geist Mono', monospace;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Geist", serif;
+  --font-mono: "Geist Mono", monospace;
   --radius: 0.5rem;
   --shadow-x: 0;
   --shadow-y: 0.25rem;
@@ -103,11 +117,16 @@
   --shadow-color: oklch(0 0 0 / 0.5);
   --shadow-2xs: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.25);
   --shadow-xs: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.25);
-  --shadow-sm: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.50), 0 1px 2px -1px hsl(0 0% 0% / 0.50);
-  --shadow: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.50), 0 1px 2px -1px hsl(0 0% 0% / 0.50);
-  --shadow-md: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.50), 0 2px 4px -1px hsl(0 0% 0% / 0.50);
-  --shadow-lg: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.50), 0 4px 6px -1px hsl(0 0% 0% / 0.50);
-  --shadow-xl: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.50), 0 8px 10px -1px hsl(0 0% 0% / 0.50);
+  --shadow-sm:
+    0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.5), 0 1px 2px -1px hsl(0 0% 0% / 0.5);
+  --shadow:
+    0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.5), 0 1px 2px -1px hsl(0 0% 0% / 0.5);
+  --shadow-md:
+    0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.5), 0 2px 4px -1px hsl(0 0% 0% / 0.5);
+  --shadow-lg:
+    0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.5), 0 4px 6px -1px hsl(0 0% 0% / 0.5);
+  --shadow-xl:
+    0 0.25rem 0.5rem 0 hsl(0 0% 0% / 0.5), 0 8px 10px -1px hsl(0 0% 0% / 0.5);
   --shadow-2xl: 0 0.25rem 0.5rem 0 hsl(0 0% 0% / 1.25);
 }
 
@@ -115,7 +134,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
+  --color-card-foreground: #cccc;
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
@@ -171,12 +190,10 @@
   --tracking-widest: calc(var(--tracking-normal) + 0.1em);
 }
 
-
 body {
   letter-spacing: var(--tracking-normal);
 }
 
-
-.wrapper{
+.wrapper {
   @apply px-4 lg:px-8 py-6;
 }

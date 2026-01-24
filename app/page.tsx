@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { moviesImg } from "@/lib/data";
 import { ArrowRight, Plus } from "lucide-react";
 import Image from "next/image";
@@ -41,7 +42,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="space-y-4 p-6 rounded-xl bg-secondary/30 border border-border/50">
+          <Card className="space-y-4 p-6 ">
             <h3 className="text-sm font-semibold text-foreground">
               How it works
             </h3>
@@ -65,7 +66,7 @@ export default function Home() {
                 <span>Drag & drop to update progress</span>
               </li>
             </ul>
-          </div>
+          </Card>
         </div>
 
         <div className="columns-2 lg:columns-3 gap-4 space-y-6 lg:w-10/12">
